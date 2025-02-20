@@ -24,7 +24,7 @@ function Home () {
             <div className="home-header">
                 <div className="slide-in">
 
-                    <h3>"Join1, Share & Celebrate – Together!"</h3>
+                    <h3>"Join, Share & Celebrate – Together!"</h3>
                     <p>
                         Welcome to Event Connect, the ultimate platform for finding and managing events that bring
                         people together.
