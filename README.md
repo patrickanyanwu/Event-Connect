@@ -1,41 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>EventConnect - README</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 20px;
-      line-height: 1.6;
-    }
-    pre {
-      background: #f4f4f4;
-      padding: 10px;
-      border: 1px solid #ddd;
-      overflow-x: auto;
-    }
-    code {
-      background: #f4f4f4;
-      padding: 2px 4px;
-      border-radius: 3px;
-    }
-    h1, h2, h3 {
-      margin-top: 1.5em;
-    }
-    a {
-      color: #0077cc;
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
-    hr {
-      margin: 2em 0;
-    }
-  </style>
-</head>
 <body>
   <h1>EventConnect</h1>
   <p>EventConnect is a full-stack web application designed to streamline event management and discovery. Users can register, create events, RSVP, and interact with event-related content. This project leverages modern web development technologies and is currently under active development.</p>
@@ -209,4 +171,3 @@ npm start</code></pre>
 
   <p><em>EventConnect is a work in progress. Contributions, feedback, and suggestions are welcome as the project evolves.</em></p>
 </body>
-</html>
