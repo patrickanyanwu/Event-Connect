@@ -56,14 +56,11 @@ EventConnect is designed to provide users with a comprehensive platform for disc
     - Create, update, and delete events.
     - RSVP to events with real-time RSVP tracking.
 
-- **Comments:**
-    - Users can leave comments on events for discussions and feedback.
-
 - **Responsive UI:**
     - A modern and mobile-responsive design for a seamless user experience.
 
 - **Error Handling:**
-    - Proper error messages and loading states for a robust user experience.
+    - Proper error messages for a robust user experience.
 
 ---
 
