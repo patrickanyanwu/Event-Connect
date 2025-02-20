@@ -137,11 +137,11 @@ DATABASE_URL=postgresql://postgres:your_postgres_password@localhost:5432/eventco
 
 <h2 id="running-the-application">Running the Application</h2>
   <p><strong>Backend:</strong></p>
-  <pre><code>cd backend
+  <pre><code>cd server
 npm start</code></pre>
   <p>The Express server should run on the port specified in your <code>.env</code> file (default: 5000).</p>
   <p><strong>Frontend:</strong></p>
-  <pre><code>cd frontend
+  <pre><code>cd client
 npm start</code></pre>
   <p>The React app will run on a development server (default: localhost:3000).</p>
 
@@ -165,7 +165,6 @@ npm start</code></pre>
     <li>Ensure that error handling and status codes are working as expected.</li>
     <li>Test authentication by manually sending JWT tokens in the <code>Authorization</code> header.</li>
   </ul>
-
   <hr>
 
 <h2 id="version-control">Version Control</h2>
