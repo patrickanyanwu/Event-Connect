@@ -16,7 +16,6 @@
     <li><a href="#version-control">Version Control</a></li>
     <li><a href="#future-development">Future Development</a></li>
     <li><a href="#acknowledgements">Acknowledgements</a></li>
-    <li><a href="#license">License</a></li>
   </ul>
 
   <hr>
