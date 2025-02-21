@@ -21,7 +21,7 @@ function Navbar() {
                 <Link className="nav-text" to="/">Event Connect</Link>
             </div>
             <div className="searchbar">
-                <input type="search" placeholder="Search For Events"/>
+                <input type="search" placeholder="Search Events"/>
                 <button><SearchIcon fontSize="small"/></button>
             </div>
             <div className="dropdown show dropbar">

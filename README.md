@@ -1,5 +1,6 @@
 <body>
   <h1>EventConnect</h1>
+    <img src="eventconnect.png" alt="EventConnect" />
   <p>EventConnect is a full-stack web application designed to streamline event management and discovery. Users can register, create events, RSVP, and interact with event-related content. This project leverages modern web development technologies and is currently under active development.</p>
 
   <hr>
