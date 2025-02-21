@@ -119,7 +119,25 @@ npm start</code></pre>
     <li><strong>Search Event:</strong> <code>POST /api/events/getevent/:name</code> - Allows users to search for events by name or location.</li>
     <li><strong>RSVP to Event:</strong> <code>POST /api/events/rsvp/:id</code> - Allows users to RSVP for an event.</li>
   </ul>
-
+<hr />
+<h2 id="database-schema">Database Schema and Relationships</h2>
+  <p>This project uses PostgreSQL as its relational database. The schema is designed to capture users, events, RSVPs, and comments. The key tables and their relationships are outlined below:</p>
+  <ul>
+    <li>
+      <strong>Users Table:</strong>
+      <p>Stores user details including <code>id</code>, <code>name</code>, <code>email</code>, and hashed password (<code>password_hash</code>). This table serves as the primary source of user information.</p>
+    </li>
+    <li>
+      <strong>Events Table:</strong>
+      <p>Contains event details such as <code>title</code>, <code>description</code>, <code>date</code>, <code>time</code>, <code>location</code>, and <code>capacity</code>. Each event record includes a foreign key (<code>created_by</code>) referencing the <code>users</code> table, establishing which user created the event.</p>
+    </li>
+    <li>
+      <strong>RSVPs Table:</strong>
+      <p>Tracks which users have RSVPed to which events. It includes foreign keys referencing both the <code>users</code> table and the <code>events</code> table. A unique constraint ensures a user can RSVP to an event only once.</p>
+    </li>
+  </ul>
+  <p>The relationships between these tables are maintained through foreign key constraints, with <code>ON DELETE CASCADE</code> used so that when a user or event is deleted, all associated RSVPs and comments are automatically removed.</p>
+    <img src="db.png" alt="Database Schema" width="100%" height="1336"/>
   <hr>
 
 <h2 id="testing">Testing</h2>
