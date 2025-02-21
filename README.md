@@ -137,7 +137,7 @@ npm start</code></pre>
     </li>
   </ul>
   <p>The relationships between these tables are maintained through foreign key constraints, with <code>ON DELETE CASCADE</code> used so that when a user or event is deleted, all associated RSVPs and comments are automatically removed.</p>
-    <img src="db.png" alt="Database Schema" width="100%" height="1336"/>
+    <img src="db.png" alt="Database Schema" width="100%" height="500px"/>
   <hr>
 
 <h2 id="testing">Testing</h2>
