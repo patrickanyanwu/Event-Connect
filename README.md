@@ -12,11 +12,11 @@
     <li><a href="#installation-and-setup">Installation and Setup</a></li>
     <li><a href="#running-the-application">Running the Application</a></li>
     <li><a href="#api-endpoints">API Endpoints</a></li>
+    <li><a href="#database-schema">Database Schema</a></li>
     <li><a href="#testing">Testing</a></li>
     <li><a href="#version-control">Version Control</a></li>
     <li><a href="#future-development">Future Development</a></li>
     <li><a href="#acknowledgements">Acknowledgements</a></li>
-    <li><a href="#database-schema">Database Schema</a></li>
   </ul>
 
   <hr>
