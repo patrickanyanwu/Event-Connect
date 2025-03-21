@@ -115,7 +115,7 @@ npm start</code></pre>
     <li><strong>User Registration:</strong> <code>POST /api/users/register</code> - Registers a new user by storing their name, email, and hashed password.</li>
     <li><strong>User Login:</strong> <code>POST /api/users/login</code> - Authenticates a user and returns a JWT token.</li>
     <li><strong>Get Events:</strong> <code>GET /api/events</code> - Retrieves a list of events from the database (requires JWT authentication).</li>
-    <li><strong>Create Event:</strong> <code>POST /api/events/create-event</code> - Allows an authenticated user to create a new event.</li>
+    <li><strong>Create Event:</strong> <code>POST /api/events/create-evecd nt</code> - Allows an authenticated user to create a new event.</li>
     <li><strong>Edit Event:</strong> <code>PUT /api/events/editevent/:id</code> - Allows users to edit an event they made.</li>
     <li><strong>Delete Event:</strong> <code>DELETE /api/events/deleteevent/:id</code> - Allows users to delete an event they made.</li>
     <li><strong>Search Event:</strong> <code>POST /api/events/getevent/:name</code> - Allows users to search for events by name or location.</li>
