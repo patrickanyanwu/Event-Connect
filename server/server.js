@@ -96,8 +96,8 @@ app.get("/api/events", authenticateToken, async (req, res) => {
     }
 });
 
-app.get("/api/events/get_user", async (req, res) => {
-    const userId = req.id;
+app.get("/api/events/get_user/:id", async (req, res) => {
+    const userId = req.params.id;
     try {
         const result = await db.query("SELECT * FROM users WHERE id = $1", [userId])
         res.status(200).send(result.rows[0].name)
