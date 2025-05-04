@@ -42,7 +42,7 @@ const Event = ({ event, onLearn }) => {
             <p className="event-description">{description}</p>
             <div className="event-details">
                 <p>
-                    <strong>Date:</strong> {date1}
+                    <strong>Date:</strong> {date1 ?? date}
                 </p>
                 <p>
                     <strong>Time:</strong> {time}

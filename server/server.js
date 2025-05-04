@@ -86,10 +86,9 @@ app.delete("/api/events/deleteevent/:id", authenticateToken, async (req, res) =>
 app.get("/api/events", authenticateToken, async (req, res) => {
     const userId = req.current_user_id;
     const userName = req.current_user_name;
-    console.log(userId, userName);
     try {
         const result = await db.query("SELECT * FROM events ORDER BY id ASC" )
-        console.log(result.rows);
+        console.log(result.rows)
         res.json(result.rows)
     } catch (err) {
         console.log(err);
@@ -103,6 +102,16 @@ app.get("/api/events/get_user/:id", async (req, res) => {
         res.status(200).send(result.rows[0].name)
     } catch (e){
         res.status(500).send("Error getting user");
+    }
+})
+
+app.get("/api/events/get_event/:id", async (req, res) => {
+    const id = req.params.id;
+    try {
+        const result = await db.query("SELECT * FROM events WHERE id = $1", [id]);
+        res.status(200).send(result.rows[0])
+    } catch (e){
+        res.status(404).send("Event not found");
     }
 })
 

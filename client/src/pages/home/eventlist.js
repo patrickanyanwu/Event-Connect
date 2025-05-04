@@ -16,9 +16,9 @@ const EventList = () => {
             time: "12:00 PM",
             location: "City Park",
             capacity: 500,
-            attendees: Array.from({ length: 500 }, (_, i) => i + 1),
+            rsvp_count: 500,
             image_url: "https://www.udiscovermusic.com/wp-content/uploads/2017/06/Coachella-GettyImages-673625850-1000x600.jpg",
-            createdBy: "Slime1",
+            created_by: "Slime1",
         },
         {
             id: 2,
@@ -28,9 +28,9 @@ const EventList = () => {
             time: "6:00 PM",
             location: "Downtown Tech Hub",
             capacity: 200,
-            attendees: Array.from({ length: 200 }, (_, i) => i + 1),
+            rsvp_count: 200,
             image_url: "https://cdn.prod.website-files.com/6593c9a7f9ab9dc8b1763db2/65b0566852bdf30e0a96201c_tech-events-meetups-hero-image.jpg", // Sample image
-            createdBy: "Froogle",
+            created_by: "Froogle",
         },
 
     ]);
@@ -38,7 +38,6 @@ const EventList = () => {
     // Function to handle RSVP (mock)
     const handleLearn = (eventId) => {
         alert(`Person Learns More About Event ${eventId}`);
-        // Here, you would send a request to your backend to update RSVP status
     };
 
     return (

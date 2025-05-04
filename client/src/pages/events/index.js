@@ -1,16 +1,27 @@
 import React, { useState, useEffect } from 'react';
 import Event from "../../components/event";
 import axios from "axios";
+import {useTypewriter} from "react-simple-typewriter";
+import "../../styles/general.css"
+import { useNavigate } from 'react-router-dom';
 
-function toTitleCase(str) {
+export function toTitleCase(str) {
     return str.toLowerCase().split(" ").map(word =>
         word.charAt(0).toUpperCase() + word.slice(1)
     ).join(" ");
 }
 
 const Events = () => {
+    const [text] = useTypewriter({
+            words: ['...', '...'],
+            loop: true,
+            typeSpeed: 150,
+            delaySpeed: 1000,
+            deleteSpeed: 150,
+        })
     const [events, setEvents] = useState([]); // State to store events
- // Error state
+    const [loading, setLoading] = useState(true); // State to manage loading
+    const navigate = useNavigate()
 
     useEffect(() => {
         const fetchEvents = async () => {
@@ -20,8 +31,6 @@ const Events = () => {
                 });
 
                 const rawEvents = Array.isArray(result.data) ? result.data : [];
-
-                // Enrich each event with its creator's data
                 const enrichedEvents = await Promise.all(rawEvents.map(async (evente) => {
                     try {
                         const userRes = await axios.get(`/api/events/get_user/${evente.created_by}`);
@@ -34,10 +43,12 @@ const Events = () => {
                         return evente;
                     }
                 }));
-
+                
                 setEvents(enrichedEvents);
             } catch (err) {
                 console.error("Error fetching events:", err);
+            } finally {
+                setLoading(false); // Set loading to false after fetching
             }
         };
 
@@ -48,19 +59,26 @@ const Events = () => {
         <div className="events">
             <h1>Events</h1>
             <div className="events-container">
-            {events.length > 0 ? (
-                events.map((evente) => {
-                    try {
-                        return (<Event key={evente.id} event={evente} onLearn={() => {
-                            alert("Learn More")
-                        }}/>)
-                    } catch (err) {
-                        console.error("Error fetching event:", err);
-                    }
-                })
-            ) : (
-                <p>Loading</p>
-            )}
+                {loading ? (
+                    <p className="eventloading">
+                    Loading{text}
+                </p>
+                ) : (
+                    events.length > 0 ? (
+                        events.map((evente) => {
+                            try {
+                                return (<Event key={evente.id} event={evente} onLearn={function() {
+                                    navigate(`/events/${evente.id}`);
+                                }}/>)
+                            } catch (err) {
+                                console.error("Error fetching event:", err);
+                                return null;
+                            }
+                        })
+                    ) : (
+                        <p>No events available</p>
+                    )
+                )}
             </div>
         </div>
     );
