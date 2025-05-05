@@ -132,6 +132,7 @@ h1 {
     color: #333;
     margin-bottom: 10px;
     background: linear-gradient(90deg, grey, black);
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-weight: bold;
@@ -536,3 +537,21 @@ h1 {
     display: flex;
     flex-direction: column;
 }
+
+.eventpage a {
+    background: linear-gradient(90deg, grey, #535353);
+    color: white;
+    font-size: 20px;
+    padding: 12px;
+    border-radius: 10px;
+    text-align: center;
+    transition: color 0.4s;
+}
+
+.eventpage a:hover {
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
+    transition: 0.4s;
+}
+

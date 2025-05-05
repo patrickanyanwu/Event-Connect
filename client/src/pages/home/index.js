@@ -15,6 +15,8 @@ function Home () {
         delaySpeed: 3000,
         deleteSpeed: 70,
     })
+
+    const isLoggedIn = localStorage.getItem("token");
     return (
         <div className="home">
         <div className="header">
@@ -32,7 +34,7 @@ function Home () {
                         like you, Event Connect has got you covered.
 
                     </p>
-                    <Link to="/login" className="get-started">Get Started</Link>
+                    {isLoggedIn ? <Link to="/events" className="get-started">Get Started</Link> :<Link to="/login" className="get-started">Get Started</Link>}
                 </div>
                 <img className="slide-in" src={Image} alt="logo"/>
             </div>

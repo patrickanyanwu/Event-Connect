@@ -29,7 +29,9 @@ const registerUser = async (name, email, password) => {
         });
         await loginUser(email, password);
     } catch (error) {
-        console.error("Registration failed:", error.response?.data || error.message);
+        const errorMessage = error.response?.data || error.message;
+        alert(`Registration failed: ${errorMessage}`); // Show an alert with the error message
+        console.error("Registration failed:", errorMessage);
     }
 }
 

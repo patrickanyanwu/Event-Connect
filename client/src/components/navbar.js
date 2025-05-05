@@ -1,15 +1,16 @@
 import React from 'react';
-import {Link} from "react-router-dom";
+import {Link, useNavigate} from "react-router-dom";
 import logo from "../images/Icon-Only-Black.png"
 import SearchIcon from '@mui/icons-material/Search';
 import MenuOpenIcon from '@mui/icons-material/MenuOpen';
 
 function Navbar() {
     const token = localStorage.getItem("token");
+    const navigate = useNavigate()
     const handleLogout = () => {
         try {
             localStorage.removeItem("token");
-            window.location.reload();
+            navigate("/");
         } catch (e) {
             console.log(e);
         }

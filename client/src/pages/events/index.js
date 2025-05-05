@@ -21,7 +21,7 @@ const Events = () => {
         })
     const [events, setEvents] = useState([]); // State to store events
     const [loading, setLoading] = useState(true); // State to manage loading
-    const navigate = useNavigate()
+    const navigate = useNavigate();
 
     useEffect(() => {
         const fetchEvents = async () => {
